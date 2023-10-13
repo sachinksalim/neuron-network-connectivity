@@ -69,7 +69,7 @@ for i=2:totalpts
     % uncomment if applied current pulse, comment otherwise
     %Iapp = pulsei*heavyside(t-ton)*heavyside(toff-t)*ones(n,1);
     
-    %Use Euler’s method to integrate eq.
+    %Use Eulerâ€™s method to integrate eq.
     v = v + deltat*(0.04*v.^2 + 5*v + 140 - u + Iapp + gsyn*W*s);
     u = u + deltat*(a*(b*v - u));
     %set v_tot,u_tot at this time point to the current value of v, u

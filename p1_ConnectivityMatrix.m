@@ -1,9 +1,16 @@
+function [n, W]=p1_ConnectivityMatrix(gsyn_k)
+% gsyn_k: Ratio of interhub gsyn v/s intrahub gsyn
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set up connectivity matrix W
 
 % 1D ring network
 % set network size n 
 n = 50;
+
+if nargin < 1 || isempty(gsyn_k)
+    gsyn_k = 0;  % Set default value for gsyn_k
+end
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % nearest neighbor coupling
@@ -49,13 +56,11 @@ for i=1:5
     end
 end
 
-k = 0;
-
 %inter-hub
 for i=1:5
     for j=1:5
         if i ~= j
-            W((i-1)*10+1,(j-1)*10+1) = k;
+            W((i-1)*10+1,(j-1)*10+1) = gsyn_k;
         end
     end
 end
@@ -87,8 +92,10 @@ clear i j
 % clear crad allconnects noconnect checki i
 % % % % % % 
 
+figure(1)
 imshow(W, 'InitialMagnification', 'fit');
 % colormap([0 0 0; 1 1 1]);
 title('W');
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+end

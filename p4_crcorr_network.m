@@ -22,6 +22,8 @@ for i=1:10:n
     hub_mean_crcorr = [hub_mean_crcorr; mean_crcorr];
 end
 
+hub_mean_crcorr = mean(hub_mean_crcorr);
+
 for i = 1:n
     temp1 = i*ones(n-1,1);
     temp2 = (1:n)'; 
