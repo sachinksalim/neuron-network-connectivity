@@ -1,4 +1,4 @@
-function [timevec,traces,traces_all] = p3_spiketraces(n,spiketimes)
+function [traces,traces_all] = p3_spiketraces(n,spiketimes)
 
 % timestamps=[-1.22 0.33 0.34 0.35 0.40 3.70 7.30]; % sec
 % timestamps2=timestamps+2;

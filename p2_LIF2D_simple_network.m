@@ -15,8 +15,8 @@ vthresh=30;
 
 % set applied current, pulse or constant
 %  constant applied current
-% Iapp = 3*ones(n,1)+ 1.5*rand(n,1);
-Iapp = 4*ones(n,1)+ 1*rand(n,1);
+Iapp = 3*ones(n,1)+ 1*rand(n,1);
+% Iapp = 4*ones(n,1)+ 0.5*rand(n,1);
 
 % % % % cell 10 Iapp = 4, all others Iapp = 2
 % Iapp = 2*ones(n,1);

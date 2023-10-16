@@ -95,7 +95,7 @@ clear i j
 figure(1)
 imshow(W, 'InitialMagnification', 'fit');
 % colormap([0 0 0; 1 1 1]);
-title('W');
+title('Connectivity Matrix (W)');
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end

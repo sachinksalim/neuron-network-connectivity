@@ -1,4 +1,4 @@
-function [mean_mpc, mpc_cellpairs] = p3_mpc_network(n,spiketimes)
+function [mean_mpc] = p3_mpc_network(n,spiketimes)
 % compute mean phase coherence for n cell network
 
 % construct array with all cell pairs
