@@ -4,3 +4,5 @@ MATLAB Code.
 
 How to use:
 ```main;```
+
+![Alt text](intro.png)
